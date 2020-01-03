@@ -88,7 +88,7 @@
 // Big screens
 @media (min-width: 1024px) {
   .header__main {
-    position: fixed;
+    position: absolute;
     top: calc(100vh - 150px);
     width: 95vw;
     .menu_button {

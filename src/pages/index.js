@@ -1,8 +1,10 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import styles from "./index.module.scss";
+import styles from "./index.module.scss"
 import SEO from "../components/seo"
+import ContactForm from "../components/ContactForm"
+
 import { useSpring, animated } from 'react-spring'
 
 const IndexPage = () => {
@@ -26,6 +28,7 @@ const IndexPage = () => {
             </p>
         </div>
       </section>
+      <ContactForm />
     </Layout>
   )
 }
