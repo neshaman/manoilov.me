@@ -5,15 +5,15 @@ import styles from "./index.module.scss"
 import SEO from "../components/seo"
 import ContactForm from "../components/ContactForm"
 
-import { useSpring, animated } from 'react-spring'
+// import { useSpring, animated } from 'react-spring'
 
 const IndexPage = () => {
-  const props = useSpring({
-    opacity: 1,
-    from: {
-      opacity: 0,
-    }
-  });
+  // const props = useSpring({
+  //   opacity: 1,
+  //   from: {
+  //     opacity: 0,
+  //   }
+  // });
 
   return (
     <Layout>
