@@ -1,0 +1,16 @@
+@import "./partials/normalize";
+@import "./partials/variables";
+
+html,
+body,
+#___gatsby {
+  width: 100%;
+  height: 100vh;
+  font-family: $primary_font;
+}
+div[role="group"][tabindex] {
+  height: 100%;
+}
+.page-wrapper {
+  height: calc(100% - 45px);
+}

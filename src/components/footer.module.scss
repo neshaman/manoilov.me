@@ -1,0 +1,15 @@
+@import "../styles/partials/variables";
+
+.footer__main {
+  display: flex;
+  background-color: $primary-dark-color;
+  color: $primary-light-color;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 100%;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
