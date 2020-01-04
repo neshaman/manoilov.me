@@ -1,3 +1,5 @@
+@import "../styles/partials/variables";
+
 textarea {
   width: 100%;
 }
@@ -5,9 +7,25 @@ textarea {
   padding: 2em 0;
 }
 .primary_btn {
-  background-color: #16262b;
-  // color: $primary-light-color;
+  background-color: $primary-dark-color;
+  color: $primary-light-color;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 5px;
+  &:hover{
+    background-color: lighten( $primary-dark-color, 5% )
+  }
 }
 .center {
   text-align: center;
+}
+.contactArea {
+  padding: 10px;
+}
+.form_font > *{
+  font-family: $primary_font;
+}
+.section__title {
+  font-size: 30px;
+  text-shadow: 0 0 2px #f0f0f0;
 }
