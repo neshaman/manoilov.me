@@ -26,24 +26,6 @@ const theme = createMuiTheme({
   },
 });
 
-// const StyledButton = withStyles({
-//   root: {
-//     background: '#16262b',
-//     borderRadius: 3,
-//     border: 0,
-//     color: 'white',
-//     height: 48,
-//     padding: '0 30px',
-//     '&:hover': {
-//       color: 'white'
-//     },
-//   },
-
-//   label: {
-//     textTransform: 'capitalize',
-//   },
-// })(Button);
-
 export default function ContactForm() {
   const classes = useStyles();
 
@@ -51,10 +33,18 @@ export default function ContactForm() {
     <section className={styles.section__contact}>
       <CssBaseline />
       <Container maxWidth="sm">
-        <form className={classes.root} name="contact" method="POST" data-netlify="true" autoComplete="off">
-          {/* <p>
-            <label>Your Name: <input type="text" name="name" /></label>
-          </p> */}
+        <form
+          action="/success"
+          className={classes.root}
+          name="contact"
+          method="post"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+          autoComplete="off"
+          data-netlify-recaptcha="true"
+        >
+          <input type="hidden" name="bot-field" />
+          <input type="hidden" name="form-name" value="contact" />
           <TextField
             fullWidth
             id="standard-name-required"
@@ -62,9 +52,6 @@ export default function ContactForm() {
             name="name"
             label="Your name"
           />
-          {/* <p>
-            <label>Your Email: <input type="email" name="email" /></label>
-          </p> */}
           <TextField
             id="standard-email-required"
             type="text"
@@ -72,9 +59,6 @@ export default function ContactForm() {
             label="Your email"
             fullWidth
           />
-          {/* <p>
-            <label>Message: <textarea name="message"></textarea></label>
-          </p> */}
           <TextareaAutosize
             aria-label="message"
             rowsMin={5}
@@ -82,9 +66,7 @@ export default function ContactForm() {
             name="message"
             type="text"
           />
-          {/* <p>
-            <button type="submit">Send</button>
-          </p> */}
+          <div data-netlify-recaptcha="true"></div>
           <ThemeProvider theme={theme}>
             <p className={styles.center}>
               <Button
