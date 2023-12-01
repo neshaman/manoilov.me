@@ -14,7 +14,6 @@ const Header = () => {
         <Link to="#">Web Development</Link>
         <Link to="#">Photography & Video Editing</Link>
         <Link to="#">3D Animation</Link>
-        <Link to="#">Contact Me</Link>
       </nav>
     </header>
   )
